@@ -3,6 +3,7 @@ package com.teaanddogdog.luckycardview;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements LuckyCardViewHelp
     private LuckyCardViewHelper mLuckyCardViewHelper2;
     private FrameLayout mFl;
     private ImageView mIv;
+    private LuckyCardViewHelper mMLuckyCardViewHelper3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +37,14 @@ public class MainActivity extends AppCompatActivity implements LuckyCardViewHelp
          */
         mFl = findViewById(R.id.fl);
         mLuckyCardViewHelper2 = new LuckyCardViewHelper().init(mFl, R.drawable.lucky_card_foreground, 60, this);
+        Button btn = findViewById(R.id.btn);
+        mMLuckyCardViewHelper3 = new LuckyCardViewHelper().init(btn, R.drawable.lucky_card_foreground, 60, this);
     }
 
     public void reset(View view) {
         mLuckyCardViewHelper1.reset();
         mLuckyCardViewHelper2.reset();
+        mMLuckyCardViewHelper3.reset();
     }
 
     @Override
