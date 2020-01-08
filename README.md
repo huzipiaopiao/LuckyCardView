@@ -1,5 +1,8 @@
+[ ![Download](https://api.bintray.com/packages/teadoglibrary/LuckyCardView/LuckyCardViewHelper/images/download.svg) ](https://bintray.com/teadoglibrary/LuckyCardView/LuckyCardViewHelper/_latestVersion)
+
 # LuckyCardView
 一行代码让View变成刮刮乐，少侵入，简单集成
+
 
 # 注意事项：
 - 1、不要再调用view的`setOnTouchListener()`方法和`setForeground()`方法，否则会导致无法刮开；
