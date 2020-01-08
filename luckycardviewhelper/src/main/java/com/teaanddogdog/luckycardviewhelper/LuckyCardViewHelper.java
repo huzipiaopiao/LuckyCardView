@@ -11,7 +11,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Build;
-import android.support.annotation.DrawableRes;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
@@ -44,14 +43,13 @@ public class LuckyCardViewHelper {
     protected int completePercent = 50;                 // 抬手后自动显示结果的百分比
 
     /**
-     *
-     * @param view 需要变成刮刮乐的view（建议是一个FrameLayout对象）
-     * @param foregroundRes 刮刮乐涂层的图片资料引用
+     * @param view            需要变成刮刮乐的view（建议是一个FrameLayout对象）
+     * @param foregroundRes   刮刮乐涂层的图片资料引用
      * @param completePercent 抬手时，检测到刮出百分之多少后，自动显示全部
-     * @param listener 监听器
+     * @param listener        监听器
      * @return
      */
-    public LuckyCardViewHelper init(View view, @DrawableRes int foregroundRes, int completePercent, LuckyCardViewHelperListener listener) {
+    public LuckyCardViewHelper init(View view, int foregroundRes, int completePercent, LuckyCardViewHelperListener listener) {
         if (view == null) {
             throw new IllegalStateException("context cant null!");
         }
@@ -153,7 +151,7 @@ public class LuckyCardViewHelper {
 
     protected void processResult(int transparentPercent) {
         if (mLuckyCardViewHelperListener != null) {
-            mLuckyCardViewHelperListener.onHandUp(mView,transparentPercent);
+            mLuckyCardViewHelperListener.onHandUp(mView, transparentPercent);
         }
 
         if (transparentPercent >= completePercent) {
@@ -230,12 +228,15 @@ public class LuckyCardViewHelper {
 
         /**
          * 没完成前，抬手后，回调（如果已完成，则不会回调）
+         *
          * @param view
          * @param scrapedPercent 已刮百分比
          */
         void onHandUp(View view, int scrapedPercent);
+
         /**
          * 检测到刮完后，回调
+         *
          * @param view
          */
         void onComplete(View view);

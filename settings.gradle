@@ -1,1 +1,1 @@
-include ':app', ':luckycardviewlibrary', ':luckycardviewhelper'
+include ':app', ':luckycardviewhelper' //, ':luckycardviewlibrary'
