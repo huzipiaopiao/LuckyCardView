@@ -3,6 +3,7 @@
 # LuckyCardView
 一行代码让View变成刮刮乐，少侵入，简单集成
 
+![演示](https://github.com/huzipiaopiao/LuckyCardView/blob/master/img/demo.gif)
 
 # 注意事项：
 - 1、不要再调用view的`setOnTouchListener()`方法和`setForeground()`方法，否则会导致无法刮开；
