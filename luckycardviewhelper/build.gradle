@@ -7,7 +7,7 @@ def gitUrl = 'https://github.com/huzipiaopiao/LuckyCardView.git'   // Git仓库�
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
-version = "1.0.0" //发布版本号
+version = "1.0.1" //发布版本号
 group = "com.teaanddogdog" //最终引用形式，如compile 'com.leon.lfilepicker:1.0.0'，其中lfilepicker在后面配置
 
 //配置参照的：https://www.jianshu.com/p/b5d3462407fc 命令：gradle bintrayUpload
@@ -17,7 +17,7 @@ android {
     buildToolsVersion "26.0.3"
 
     defaultConfig {
-        minSdkVersion 1
+        minSdkVersion 5
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"

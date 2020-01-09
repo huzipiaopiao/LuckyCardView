@@ -12,13 +12,14 @@
 
 # 使用方法：
 ## 1、依赖配置
-- 在项目最外面的build.gradle文件中，allprojects节点下的repositories中添加：
+
+- 在app的build.gradle文件中，dependencies节点下添加，其中的版本建议根据最新版本修改：
+
+        compile 'com.teaanddogdog:luckycardviewhelper:1.0.1'
+
+- 如果报错无法解析依赖，则在项目最外面的build.gradle文件中，allprojects节点下的repositories中添加：
 
         maven { url  "https://dl.bintray.com/teadoglibrary/LuckyCardView"  }
-
-- 再在app的build.gradle文件中，dependencies节点下添加，其中的版本建议根据最新版本修改：
-
-        compile 'com.teaanddogdog:luckycardviewhelper:1.0.0'
 
 
 ## 2、代码中使用
